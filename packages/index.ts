@@ -1,20 +1,13 @@
-import type { App } from 'vue'
-
-import GrButton from './components/button'
-
-const components:any[] = [GrButton]
-/**
- * 组件注册
- * @param {App} app Vue 对象
- * @returns {void}
- */
-const install = function (app: App) {
-	components.forEach((component) => app.component(component.name, component))
+import { App } from 'vue'
+import * as components from './componentList'
+import {SFCWithInstall} from "./types";
+export * from './componentList'
+const plugin:SFCWithInstall<typeof components> = {
+    ...components,
+    install(app:App){
+        Object.values(plugin).forEach((component:any)=>{
+            if(typeof component !=='function') app.component(component.name,component)
+        })
+    }
 }
-
-export { GrButton }
-
-export default {
-	install,
-	...components,
-}
+export default plugin

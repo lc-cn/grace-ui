@@ -6,5 +6,5 @@ icon.install = (app: App) => {
 	app.component(icon.name, icon)
 }
 
-const _icon: SFCWithInstall<typeof icon> = icon // 增加类型
+const _icon: SFCWithInstall<typeof icon> = Object.assign(icon) // 增加类型
 export default _icon

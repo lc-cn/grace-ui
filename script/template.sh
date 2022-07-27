@@ -55,7 +55,7 @@ ${NAME}.install = (app: App) => {
 	app.component(${NAME}.name, ${NAME})
 }
 
-const _${NAME}: SFCWithInstall<typeof ${NAME}> = ${NAME} // 增加类型
+const _${NAME}: SFCWithInstall<typeof ${NAME}> = Object.assign(${NAME}) // 增加类型
 export default _${NAME}
 EOF
 

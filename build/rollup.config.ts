@@ -3,7 +3,7 @@ import typescript from 'rollup-plugin-typescript2'
 import vue from 'rollup-plugin-vue' // 处理vue文件
 import { readdirSync, statSync } from 'fs'
 import { resolve } from 'path'
-import path from 'path'
+import * as path from 'path'
 const output = resolve(__dirname, '../lib')
 
 function getAllDirbyFilename(dir, outDir = null) {

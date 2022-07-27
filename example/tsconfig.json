@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"allowJs": true,
+		"module": "esnext",
+		"lib": ["esnext", "dom"],
+		"types": ["../typings/vue-shim"],
+		"resolveJsonModule": true,
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+		    "grace-ui/*": ["../packages/*"],
+		    "grace-ui": ["../packages"]
+		}
+	},
+	"include": ["**/*"]
+}

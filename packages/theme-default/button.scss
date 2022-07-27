@@ -1,0 +1,19 @@
+.gr-button {
+	inset:unset;
+	margin: 0;
+	padding: 0;
+	outline: unset;
+	border-width: 1px;
+	&.middle{
+		height:25px;
+		&.circle{
+			width: 32px;
+			height: 32px;
+			border-radius: 16px;
+		}
+	}
+	&.primary{
+		background-color: aqua;
+		color: white;
+	}
+}

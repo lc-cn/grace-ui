@@ -1,0 +1,121 @@
+@import "./common.scss";
+@import "./variables.scss";
+.gr-button {
+	inset:unset;
+	padding: 0;
+	background-color: unset;
+	cursor: pointer;
+	outline: none;
+	border-width: 0;
+	border-style: solid;
+	margin: 0 2px;
+	&:nth-of-type(1){
+		margin-left: 0;
+	}
+	&:nth-last-of-type(1){
+		margin-right: 0;
+	}
+	&.default{
+		border-width: 1px;
+		border-color: $default-border-color;
+		color:$default-text-color;
+		&:hover{
+
+		}
+	}
+	&.loading{
+		cursor: auto;
+	}
+	&.large{
+		height: 32px;
+		border-radius: 5px;
+		padding: 0 10px;
+		&.circle{
+			padding: 0;
+			width: 32px;
+			border-radius: 16px;
+		}
+	}
+	&.middle{
+		height:28px;
+		border-radius: 3px;
+		padding: 0 8px;
+		&.circle{
+			padding: 0;
+			width: 28px;
+			border-radius: 14px;
+		}
+	}
+	&.small{
+		height: 24px;
+		padding: 0 4px;
+		border-radius: 2px;
+		&.circle{
+			padding: 0;
+			width: 24px;
+			border-radius: 12px;
+		}
+	}
+	&.primary{
+		background-color: $primary-color;
+		color: white;
+	}
+	&.warn{
+		background-color: $warn-color;
+		color: white;
+	}
+	&.error{
+		background-color: $error-color;
+		color: white;
+	}
+	&.info{
+		background-color: $info-color;
+		color: white;
+	}
+	&.success{
+		background-color: $success-color;
+		color: white;
+	}
+	&.plain{
+		background-color: rgba(0,0,0,0);
+		border-width: 1px;
+		border-style: solid;
+		color: $default-text-color;
+		&.default{
+			border-color: $default-border-color;
+			&:hover{
+				background-color: $default-border-color;
+			}
+		}
+		&.primary{
+			border-color: $primary-color;
+			&:hover{
+				background-color: $primary-color;
+			}
+		}
+		&.success{
+			border-color: $success-color;
+			&:hover{
+				background-color: $success-color;
+			}
+		}
+		&.info{
+			border-color: $info-color;
+			&:hover{
+				background-color: $info-color;
+			}
+		}
+		&.warn{
+			border-color: $warn-color;
+			&:hover{
+				background-color: $warn-color;
+			}
+		}
+		&.error{
+			border-color: $error-color;
+			&:hover{
+				background-color: $error-color;
+			}
+		}
+	}
+}

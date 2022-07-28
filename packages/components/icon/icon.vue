@@ -4,7 +4,7 @@
 <script lang='ts'>
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'icon',
+  name: 'GrIcon',
   props: {
     name:String,
   },

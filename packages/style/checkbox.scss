@@ -1,0 +1,41 @@
+@import "./variables";
+.gr-checkbox{
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  &.vertical{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    label{
+      margin-left: 0;
+      margin-top: 4px;
+      &:nth-of-type(1){
+        margin-top: 0;
+      }
+    }
+  }
+  label{
+    display: flex;
+    margin-left: 4px;
+    align-items: center;
+    &:nth-of-type(1){
+      margin-left: 0;
+    }
+  }
+  input[type='checkbox']{
+    margin: 0 4px 0 0;
+    &.middle{
+      width: 16px;
+      height: 16px;
+    }
+    &.large{
+      width: 18px;
+      height: 18px;
+    }
+    &.small{
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

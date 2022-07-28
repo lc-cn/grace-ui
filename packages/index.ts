@@ -5,8 +5,8 @@ export * from './componentList'
 const plugin:SFCWithInstall<typeof components> = {
     ...components,
     install(app:App){
-        Object.values(plugin).forEach((component:any)=>{
-            if(typeof component !=='function') app.component(component.name,component)
+        Object.entries(components).forEach(([name,component])=>{
+            if(typeof component !=='function') app.component(name,component)
         })
     }
 }

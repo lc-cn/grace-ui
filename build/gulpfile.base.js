@@ -4,8 +4,8 @@ const del = require('del')
 
 // 打包配置
 const config = {
-	input: '../packages/theme-default',
-	output: '../lib/theme-default',
+	input: '../packages/style',
+	output: '../lib/style',
 }
 // 导出配置项
 exports.config = config

@@ -5,19 +5,19 @@
           loading && 'loading',
           type,
           size,
+          plain && 'plain',
           circle && 'circle'
       ]"
   >
     <gr-icon v-if="loading" name="loading"/>
     <gr-icon :name="icon" v-if="!loading && icon"/>
-    <template v-if="$slots.default"><slot></slot></template>
+    <template v-if="$slots.default && !circle"><slot></slot></template>
   </button>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import GrIcon from '../icon'
-
+import {GrIcon} from '../../componentList'
 export default defineComponent({
   name: 'GrButton',
   components:{GrIcon},
@@ -25,10 +25,11 @@ export default defineComponent({
     type: {
       type: String,
       default: 'default',
-      validator(type) {
-        return ['default', 'success', 'error', 'info', 'primary'].includes(type)
+      validator(type:string) {
+        return ['default','warn', 'success', 'error', 'info', 'primary'].includes(type)
       }
     },
+    plain:Boolean,
     circle:Boolean,
     icon:String,
     size:{
@@ -43,5 +44,3 @@ export default defineComponent({
 
 })
 </script>
-
-<style scoped></style>

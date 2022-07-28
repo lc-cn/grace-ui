@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import {GrButton} from 'grace-ui'
-import 'grace-ui/theme-default/index.scss'
+import GraceUI from 'grace-ui'
+import 'grace-ui/style/index.scss'
 import App from './App.vue'
-console.log(GrButton)
-createApp(App).use(GrButton).mount('#app')
+console.log(GraceUI)
+createApp(App).use(GraceUI).mount('#app')

@@ -7,8 +7,6 @@
     <label v-if="!options" :for="this.id">
       <input type="checkbox"
              :class="[
-                 model && 'checked',
-                 disabled && 'disabled',
                  size
              ]"
              :value="trueValue||value"
@@ -21,7 +19,6 @@
     <label :for="`${id}:${option.value}`" v-else v-for="option in options">
       <input type="checkbox"
              :class="[
-                 model.includes(option.value) && 'checked',
                  size
              ]"
              :id="`${id}:${option.value}`"

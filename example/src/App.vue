@@ -1,14 +1,28 @@
 <template>
 	<div>
 		组件实例：
+    <h2>icon</h2>
+    <gr-icon name="eye" size="small"></gr-icon>
+    <gr-icon name="eye"></gr-icon>
+    <gr-icon name="eye" size="large"></gr-icon>
+    <gr-icon name="eye" size="64"></gr-icon>
     <h2>button</h2>
     type
     <div>
       <gr-button>default</gr-button>
       <gr-button type="info">info</gr-button>
+      <gr-button type="info" icon="eye">info</gr-button>
       <gr-button type="primary">primary</gr-button>
       <gr-button type="warn">warn</gr-button>
       <gr-button type="error">error</gr-button>
+    </div>
+    按钮组
+    <div>
+      <gr-button-group>
+        <gr-button type="primary" plain>primary</gr-button>
+        <gr-button type="warn" plain>primary</gr-button>
+        <gr-button type="error" plain>primary</gr-button>
+      </gr-button-group>
     </div>
     plain
     <div>
@@ -74,9 +88,50 @@
     <div>
       <gr-radio v-model="checked" :options="options"/>
     </div>
-    <gr-input v-model.money="inputValue"/>
     {{checked}}
-    input:{{inputValue}}
+    <h2>input</h2>
+    <div>
+      不同情况下的图标<br/>
+      <gr-input v-model="inputValue"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" type="password"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" prefix="search"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" suffix="home"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" prefix="search" suffix="home"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" prefix="search" suffix="home"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" type="password" prefix="search" suffix="home" clearable/>input:{{inputValue}}<br/>
+    </div>
+    <div>
+      不同尺寸<br/>
+      <gr-input v-model="inputValue" size="small"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" size="large"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" type="textarea" size="small"/><br/>
+      <gr-input v-model="inputValue" type="textarea"/><br/>
+      <gr-input v-model="inputValue" type="textarea" size="large"/><br/>
+    </div>
+    <div>
+      不同状态<br/>
+      <gr-input v-model="inputValue"/>input:{{inputValue}}<br/>
+      <gr-input v-model="inputValue" readonly/><br/>
+      <gr-input v-model="inputValue" disabled/><br/>
+    </div>
+    <div>
+      不同类型<br/>
+      <gr-input v-model="inputValue"/><br/>
+      <gr-input v-model="inputValue" type="password"/><br/>
+      <gr-input v-model="inputValue" type="textarea" :max="10" show-count/><br/>
+    </div>
+    <h2>popper</h2>
+    <gr-popper hover placement="top">
+      <template #reference>
+        <gr-button>test</gr-button>
+      </template>
+      <div>
+        asdflsjdfla
+      </div>
+    </gr-popper>
+    <h2>下拉选择</h2>
+    <gr-select v-model="selectValue1" :options="options"></gr-select>
 	</div>
 </template>
 
@@ -84,34 +139,40 @@
 export default {
   data(){
     return {
-      checked:'',
-      inputValue:'',
-      checkboxValue1:true,
-      checkboxValue2:'未成年',
-      checkboxValue3:['banana'],
-      options:[
+      checked: '',
+      inputValue: '',
+      checkboxValue1: true,
+      checkboxValue2: '未成年',
+      checkboxValue3: ['banana'],
+      options: [
         {
-          label:'香蕉',
-          value:'banana'
+          label: '香蕉',
+          value: 'banana'
         },
         {
-          label:'苹果',
-          disabled:true,
-          value:'apple'
+          label: '苹果',
+          disabled: true,
+          value: 'apple'
         },
         {
-          label:'橙子',
-          value:'orange'
+          label: '橙子',
+          value: 'orange'
         },
         {
-          label:'芒果',
-          value:'mango'
+          label: '芒果',
+          value: 'mango'
         },
         {
-          label:'葡萄',
-          value:'grape'
+          label: '葡萄',
+          value: 'grape'
         }
-      ]
+      ],
+      selectValue1: '',
+    }
+  },
+  watch:{
+    selectValue1(value){
+      console.log(value)
     }
   }
 }

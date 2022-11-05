@@ -1,0 +1,11 @@
+.gr-select{
+  display: inline-block;
+  .gr-popup-wrap{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    .gr-select-option{
+      gap: 4px 0;
+    }
+  }
+}

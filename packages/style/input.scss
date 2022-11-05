@@ -1,0 +1,105 @@
+@import "./common.scss";
+@import "./variables.scss";
+.gr-input {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid $default-border-color;
+  border-radius: 3px;
+  padding: 0 1px;
+
+  &.textarea {
+    &:disabled {
+      background-color: unset;
+    }
+
+    &::placeholder {
+      padding-left: 4px;
+    }
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  &.focus {
+    border-color: $primary-color;
+  }
+
+  &.error {
+    border-color: $error-color;
+  }
+
+  &.disabled {
+    background-color: rgba(220, 220, 220, .3);
+  }
+
+  &.small {
+    width: 120px;
+    height: 20px;
+
+    &.textarea {
+      height: 60px;
+    }
+  }
+
+  &.middle {
+    width: 160px;
+    height: 24px;
+
+    &.textarea {
+      height: 80px;
+    }
+  }
+
+  &.large {
+    width: 200px;
+    height: 28px;
+
+    &.textarea {
+      height: 100px;
+    }
+  }
+
+  input {
+    border: none;
+    height: 100%;
+    min-width: 30px;
+    padding: 0;
+    flex: auto;
+
+    &:disabled {
+      background-color: unset;
+    }
+
+    &::placeholder {
+      padding-left: 4px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .gr-icon {
+    cursor: pointer;
+    color: #909399;
+  }
+}
+
+.gr-textarea-wrap {
+  position: relative;
+  display: inline-flex;
+
+  textarea.has-count {
+    min-height: 15px!important;
+    padding-bottom: 18px;
+  }
+
+  .count {
+    position: absolute;
+    left: 2px;
+    bottom: 1px;
+  }
+}

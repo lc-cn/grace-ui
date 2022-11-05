@@ -1,0 +1,19 @@
+.gr-button-group{
+  display: flex;
+  .gr-button{
+    border-radius: 0!important;
+    margin:0 -1px;
+    border-collapse:collapse;
+    &:hover{
+      z-index: 1;
+    }
+    &:nth-of-type(1){
+      border-radius: 4px 0 0 4px !important;
+      margin: 0;
+    }
+    &:nth-last-of-type(1){
+      margin: 0;
+      border-radius: 0 4px 4px 0 !important;
+    }
+  }
+}

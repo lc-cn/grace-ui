@@ -1,4 +1,5 @@
-@import "./variables";
+@import "./common.scss";
+@import "./variables.scss";
 .gr-checkbox{
   flex-wrap: wrap;
   display: flex;

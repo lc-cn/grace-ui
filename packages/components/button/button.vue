@@ -9,8 +9,8 @@
           circle && 'circle'
       ]"
   >
-    <gr-icon v-if="loading" name="loading"/>
-    <gr-icon :name="icon" v-if="!loading && icon"/>
+    <gr-icon v-if="loading" :size="size" name="loading"/>
+    <gr-icon :name="icon" :size="size" v-if="!loading && icon"/>
     <template v-if="$slots.default && !circle"><slot></slot></template>
   </button>
 </template>
@@ -35,7 +35,7 @@ export default defineComponent({
     size:{
       type:String,
       default:'middle',
-      validator(size){
+      validator(size:string){
         return ['large','middle','small'].includes(size)
       }
     },

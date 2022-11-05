@@ -21,6 +21,10 @@
 		"experimentalDecorators": true,
 		"types": ["vite/client"],
 		"typeRoots": ["./node_modules/@types/", "./typings"],
+		"paths":{
+		    "grace-ui": ["./packages"],
+		    "grace-ui/*": ["./packages/*"]
+		},
 		"lib": ["esnext", "dom"]
 	},
 	"include": [

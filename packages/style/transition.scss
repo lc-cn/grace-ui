@@ -1,0 +1,45 @@
+
+/* 四个方向过渡 */
+/* bottom */
+.bottom-slide-enter,.bottom-slide-leave-to {
+    transform: translateY(100%);
+}
+.bottom-slide-enter-active,     .bottom-slide-leave-active {
+    transition: all .3s linear;
+}
+.bottomSlide-enter-to,   .bottom-slide-leave{
+    transform: translateY(0%);
+}
+
+/* top */
+.top-slide-enter,.top-slide-leave-to {
+    transform: translateY(-100%);
+}
+.top-slide-enter-active,.top-slide-leave-active {
+    transition: all .3s linear;
+}
+.top-slide-enter-to,.top-slide-leave{
+    transform: translateY(0%);
+}
+
+/* left */
+.leftSlide-enter,.leftSlide-leave-to {
+    transform: translateX(-100%);
+}
+.leftSlide-enter-active,     .leftSlide-leave-active {
+    transition: all .3s linear;
+}
+.leftSlide-enter-to,   .leftSlide-leave{
+    transform: translateX(0%);
+}
+
+/* right */
+.rightSlide-enter,.rightSlide-leave-to {
+    transform: translateX(100%);
+}
+.rightSlide-enter-active,     .rightSlide-leave-active {
+    transition: all .3s linear;
+}
+.rightSlide-enter-to,   .rightSlide-leave{
+    transform: translateX(0%);
+}

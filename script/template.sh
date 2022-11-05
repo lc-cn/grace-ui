@@ -67,7 +67,7 @@ cat <<EOF >"$DOCS_FILE_PATH/${NAME}.md"
 # ${NAME} 文档
 
 <script setup>
-import ${NAME} from 'grace-ui'
+import ${NAME} from '../../packages/components/${NAME}'
 
 </script>
 <${NAME}/>

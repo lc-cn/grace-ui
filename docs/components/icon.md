@@ -1,7 +1,7 @@
 # icon 文档
 
 <script setup>
-import icon from 'grace-ui'
+import icon from '../../packages/components/icon'
 
 </script>
 <icon/>

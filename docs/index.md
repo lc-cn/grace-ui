@@ -2,4 +2,4 @@
 sidebar: false
 ---
 
-# Hello XiaoSiComponents
+# Hello GraceUI

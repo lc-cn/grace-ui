@@ -16,21 +16,23 @@
       >
       <slot>{{label}}</slot>
     </label>
-    <label :for="`${id}:${option.value}`" v-else v-for="option in options">
-      <input type="checkbox"
-             :class="[
+    <template :key="option.value" v-else v-for="option in options">
+      <label :for="`${id}:${option.value}`">
+        <input type="checkbox"
+               :class="[
                  size
              ]"
-             :id="`${id}:${option.value}`"
-             :value="option.value"
-             :disabled="disabled || option.disabled ||
+               :id="`${id}:${option.value}`"
+               :value="option.value"
+               :disabled="disabled || option.disabled ||
              (max && model.length>=max && !model.includes(option.value)) ||
              (min !==undefined && model.length<=min && model.includes(option.value))"
-             :key="option.value"
-             v-model="model"
-      >
-      <slot>{{option.label}}</slot>
-    </label>
+               :key="option.value"
+               v-model="model"
+        >
+        <slot>{{option.label}}</slot>
+      </label>
+    </template>
   </div>
 </template>
 <script lang='ts'>

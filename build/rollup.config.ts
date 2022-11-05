@@ -16,7 +16,7 @@ function getAllDirbyFilename(dir, outDir = null) {
 		let outDirName = outDir ? `${outDir}/${file}` : file
 
 		if (/\.(js|ts)$/.test(file)) {
-			if (['theme-default', 'types.ts'].includes(file)) return resultArr
+			if (['style', 'types.ts'].includes(file)) return resultArr
 
 			return resultArr.push({
 				input: `${dirPath}/${file}`,
@@ -29,7 +29,7 @@ function getAllDirbyFilename(dir, outDir = null) {
 							compilerOptions: {
 								declaration: false,
 							},
-							exclude: ['node_modules', 'examples', 'mobile', 'tests'],
+							exclude: ['node_modules', 'example', 'mobile', 'tests'],
 						},
 						abortOnError: false,
 						clean: true,

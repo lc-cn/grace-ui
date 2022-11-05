@@ -24,7 +24,7 @@ const config = [
 				useTsconfigDeclarationDir: false,
 				tsconfigOverride: {
 					include: ['packages/**/*'],
-					exclude: ['node_modules', 'examples', 'mobile', 'tests'],
+					exclude: ['node_modules', 'example', 'mobile', 'tests'],
 				},
 				abortOnError: false,
 			}),

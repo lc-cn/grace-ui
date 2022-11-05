@@ -3,20 +3,41 @@ import type { UserConfig } from 'vitepress'
 function getDemoSidebar() {
 	return [
 		{
-			text: '组件',
+			text: '基础组件',
 			children: [
 				{
-					text: 'buttom',
+					text: 'button',
 					link: '/components/button',
+				},
+				{
+					text: 'icon',
+					link: '/components/icon',
 				},
 			],
 		},
+		{
+			text:'表单组件',
+			children: [
+				{
+					text: 'input',
+					link: '/components/input',
+				},
+				{
+					text: 'checkbox',
+					link: '/components/checkbox',
+				},
+				{
+					text: 'radio',
+					link: '/components/radio',
+				},
+			]
+		}
 	]
 }
 
 const config: UserConfig = {
 	lang: 'zh-CN',
-	title: 'XiaoSiComponents',
+	title: 'GraceUI',
 	description: 'Just playing around.',
 	themeConfig: {
 		// 展示搜索框
@@ -38,7 +59,7 @@ const config: UserConfig = {
 			},
 			{
 				text: 'GitHub',
-				link: 'https://github.com/SuperCuteXiaoSi/xiaosiCommitLib',
+				link: 'https://github.com/liucl-cn/grace-ui',
 			},
 		],
 		// 侧边栏
